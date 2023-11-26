@@ -16,11 +16,11 @@ const initializeDbAndServer = async () => {
     try {
         database = await open({
             filename: databasePath,
-            drive: sqlite3.database,
+            driver: sqlite3.database,
         });
 
         app.listen(3000, () =>
-            console.log("server Running at http://localhost:3000/")
+            console.log("Server Running at http://localhost:3000/")
         );
     } catch (e) {
         console.log(`DB Error: ${e.message}`);
